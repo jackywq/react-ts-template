@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "outDir": "./dist/",
+        "paths": {
+            "@": ["./src"],
+            "@/*": ["./src/*"]
+        },
+        "sourceMap": true,
+        "strict": false,
+        "target": "esnext",
+        "types": ["node", "react", "react-dom", "antd"],
+        "emitDecoratorMetadata": true
+    },
+    "rules": {
+        "no-implicit-dependencies": ["optional", ["src"]]
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src/**/*", "src/declaration.d.ts", "src/images.d.ts", ".eslintrc.js"]
+}

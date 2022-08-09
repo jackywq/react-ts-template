@@ -1,0 +1,52 @@
+{
+    /**
+     * @babel/preset-react: 转换JSX语法
+     * @babel/preset-typescript: Typescript转换成Javascript
+     * @babel/preset-env: 环境预设
+     */
+    "ignore": ["node_modules/**/*"],
+    "presets": [
+        ["@babel/preset-typescript"],
+        [
+            "@babel/preset-env",
+            {
+                "loose": true,
+                // 保留ES模块
+                "modules": false
+            }
+        ],
+        "@babel/preset-react"
+    ],
+
+    /**
+     * @babel/plugin-proposal-class-properties： class语法转译
+     * babel-plugin-add-module-exports： 将export.default转成符合ES6规范的代码
+     * @babel/plugin-transform-classes： 对一些继承类、超类的代码进行转译
+     */
+    "plugins": [
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-private-methods",
+            {
+                "loose": true
+            }
+        ],
+        "babel-plugin-add-module-exports",
+        "@babel/plugin-transform-classes",
+
+        // antd按需加载，`style: true` 会加载 less 文件
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": true
+            }
+        ]
+    ]
+}

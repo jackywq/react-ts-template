@@ -1,0 +1,27 @@
+.leftMenu {
+    .logo {
+        background-color: #002140;
+        transition: all 0.3s;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            height: 25px;
+        }
+        span {
+            color: #ffffff;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    aside {
+        overflow: auto;
+        .ant-layout-sider-children {
+            height: calc(100vh - 50px);
+        }
+    }
+}

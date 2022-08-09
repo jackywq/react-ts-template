@@ -1,0 +1,11 @@
+/**
+ * 1. husky: 操作git钩子的工具
+ * 2. lint-staged: 本地暂存代码检查工具
+ * 3. commitlint: commit信息校验工具
+ */
+{
+    "hooks": {
+        "pre-commit": "npm run lint",
+        "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+}
