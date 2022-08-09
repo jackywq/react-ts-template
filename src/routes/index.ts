@@ -7,7 +7,7 @@ export interface RouteProps {
     children?: Array<RouteProps>
 }
 
-const Home = lazy(() => import('../pages/home'))
+const Home = lazy(() => import('@/pages/home'))
 
 const Hooks = lazy(() => import('@/pages/Hooks'))
 
@@ -18,6 +18,8 @@ const Context = lazy(() => import('@/pages/Context'))
 const SetState = lazy(() => import('@/pages/SetState'))
 
 const EffectHooks = lazy(() => import('@/pages/EffectHooks'))
+
+const UseMemoHooks = lazy(() => import('@/pages/UseMemoHooks'))
 
 const UseMemoAndCallbackHooks = lazy(() => import('@/pages/UseMemoAndCallbackHooks'))
 
@@ -52,6 +54,11 @@ const routes: RouteProps[] = [
         path: '/effectHooks',
         name: 'EffectHooks',
         component: EffectHooks,
+    },
+    {
+        path: '/useMemo',
+        name: 'UseMemoHooks',
+        component: UseMemoHooks,
     },
     {
         path: '/useMemoAndCallbackHooks',

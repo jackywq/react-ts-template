@@ -13,6 +13,7 @@ module.exports = {
             version: 'detect',
         },
     },
+
     rules: {
         // 关闭any类型校验
         '@typescript-eslint/no-explicit-any': 'off',
@@ -33,6 +34,9 @@ module.exports = {
         'eslint no-loss-of-precision': 'off',
 
         // 关闭非空断言的严格校验
-        '@typescript-eslint/no-non-null-assertion': 'off'
+        '@typescript-eslint/no-non-null-assertion': 'off',
+
+        // 关闭使用匿名函数创建组件校验
+        'react/display-name': 'off'
     },
 }
