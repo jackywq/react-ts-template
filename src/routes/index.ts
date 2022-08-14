@@ -1,3 +1,9 @@
+/*
+ * @Author: quan.wang
+ * @Date: 2022-08-14 15:33:05
+ * @LastEditors: wuyue.nan
+ * @LastEditTime: 2022-08-14 21:30:16
+ */
 import { lazy } from 'react'
 export interface RouteProps {
     name?: string
@@ -32,38 +38,44 @@ const routes: RouteProps[] = [
     },
     {
         path: '/context',
-        name: 'Context',
+        name: 'Context上下文',
         component: Context,
     },
     {
-        path: '/hooks',
-        name: 'Hooks',
-        component: Hooks,
-    },
-    {
         path: '/lifeCycle',
-        name: 'LifeCycle',
+        name: 'React生命周期',
         component: LifeCycle,
     },
     {
         path: '/setState',
-        name: 'SetState',
+        name: 'React SetState用法',
         component: SetState,
     },
     {
-        path: '/effectHooks',
-        name: 'EffectHooks',
-        component: EffectHooks,
-    },
-    {
-        path: '/useMemo',
-        name: 'UseMemoHooks',
-        component: UseMemoHooks,
-    },
-    {
-        path: '/useMemoAndCallbackHooks',
-        name: 'useMemoAndCallbackHooks',
-        component: UseMemoAndCallbackHooks,
+        path: '/hooks',
+        name: 'React Hooks',
+        children: [
+            {
+                path: '/hooks',
+                name: 'Hooks基本用法',
+                component: Hooks,
+            },
+            {
+                path: '/effectHooks',
+                name: 'useEffect、useLayoutEffect区别',
+                component: EffectHooks,
+            },
+            {
+                path: '/useMemo',
+                name: 'UseMemo钩子函数使用',
+                component: UseMemoHooks,
+            },
+            {
+                path: '/useMemoAndCallbackHooks',
+                name: 'UseMemo和UseCallback结合使用',
+                component: UseMemoAndCallbackHooks,
+            },
+        ],
     },
 ]
 
