@@ -2,20 +2,22 @@
  * @Author: quan.wang
  * @Date: 2022-08-19 09:32:16
  * @LastEditors: quan.wang
- * @LastEditTime: 2022-08-19 09:35:26
+ * @LastEditTime: 2022-08-19 11:04:27
  */
 import { lazy } from 'react'
 import type { RouteProps } from './index'
 
 const Hooks = lazy(() => import('@/pages/Hooks'))
 
-const EffectHooks = lazy(() => import('@/pages/EffectHooks'))
+const EffectHooks = lazy(() => import('@/pages/Hooks/EffectHooks'))
 
-const UseMemoHooks = lazy(() => import('@/pages/UseMemoHooks'))
+const UseMemoHooks = lazy(() => import('@/pages/Hooks/UseMemoHooks'))
 
-const UseMemoAndCallbackHooks = lazy(() => import('@/pages/UseMemoAndCallbackHooks'))
+const UseCallbackHooks = lazy(() => import('@/pages/Hooks/UseCallbackHooks'))
 
-const CustomerHooks = lazy(() => import('@/pages/CustomerHooks'))
+const UseMemoAndCallbackHooks = lazy(() => import('@/pages/Hooks/UseMemoAndCallbackHooks'))
+
+const CustomerHooks = lazy(() => import('@/pages/Hooks/CustomerHooks'))
 
 const hooksRoutes: RouteProps[] = [
     {
@@ -30,8 +32,13 @@ const hooksRoutes: RouteProps[] = [
     },
     {
         path: '/useMemo',
-        name: 'UseMemo钩子函数使用',
+        name: 'UseMemo使用',
         component: UseMemoHooks,
+    },
+    {
+        path: '/useCallback',
+        name: 'UseCallbackHooks使用',
+        component: UseCallbackHooks,
     },
     {
         path: '/useMemoAndCallbackHooks',
