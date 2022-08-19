@@ -1,10 +1,11 @@
 /*
  * @Author: quan.wang
  * @Date: 2022-08-14 15:33:05
- * @LastEditors: wuyue.nan
- * @LastEditTime: 2022-08-14 21:30:16
+ * @LastEditors: quan.wang
+ * @LastEditTime: 2022-08-19 09:35:17
  */
 import { lazy } from 'react'
+import hooksRoutes from './hooks'
 export interface RouteProps {
     name?: string
     path?: string
@@ -15,19 +16,11 @@ export interface RouteProps {
 
 const Home = lazy(() => import('@/pages/home'))
 
-const Hooks = lazy(() => import('@/pages/Hooks'))
-
 const LifeCycle = lazy(() => import('@/pages/LifeCycle/parent'))
 
 const Context = lazy(() => import('@/pages/Context'))
 
 const SetState = lazy(() => import('@/pages/SetState'))
-
-const EffectHooks = lazy(() => import('@/pages/EffectHooks'))
-
-const UseMemoHooks = lazy(() => import('@/pages/UseMemoHooks'))
-
-const UseMemoAndCallbackHooks = lazy(() => import('@/pages/UseMemoAndCallbackHooks'))
 
 const routes: RouteProps[] = [
     {
@@ -54,28 +47,7 @@ const routes: RouteProps[] = [
     {
         path: '/hooks',
         name: 'React Hooks',
-        children: [
-            {
-                path: '/hooks',
-                name: 'Hooks基本用法',
-                component: Hooks,
-            },
-            {
-                path: '/effectHooks',
-                name: 'useEffect、useLayoutEffect区别',
-                component: EffectHooks,
-            },
-            {
-                path: '/useMemo',
-                name: 'UseMemo钩子函数使用',
-                component: UseMemoHooks,
-            },
-            {
-                path: '/useMemoAndCallbackHooks',
-                name: 'UseMemo和UseCallback结合使用',
-                component: UseMemoAndCallbackHooks,
-            },
-        ],
+        children: hooksRoutes,
     },
 ]
 
