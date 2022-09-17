@@ -6,7 +6,7 @@ function TextInputWithFocusButton() {
     const onButtonClick = () => {
         // `current` 指向已挂载到 DOM 上的文本输入元素
         inputEl.current.focus()
-        console.log(11111)
+        console.log(2222)
     }
     return (
         <>
