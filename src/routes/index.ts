@@ -1,11 +1,6 @@
-/*
- * @Author: quan.wang
- * @Date: 2022-08-14 15:33:05
- * @LastEditors: quan.wang
- * @LastEditTime: 2022-08-19 09:35:17
- */
 import { lazy } from 'react'
 import hooksRoutes from './hooks'
+import customerHooksRoutes from './customerHooks'
 export interface RouteProps {
     name?: string
     path?: string
@@ -48,6 +43,11 @@ const routes: RouteProps[] = [
         path: '/hooks',
         name: 'React Hooks',
         children: hooksRoutes,
+    },
+    {
+        path: '/customer/hooks',
+        name: '自定义Hooks',
+        children: customerHooksRoutes,
     },
 ]
 

@@ -1,9 +1,3 @@
-/*
- * @Author: quan.wang
- * @Date: 2022-08-19 09:32:16
- * @LastEditors: quan.wang
- * @LastEditTime: 2022-08-19 18:00:40
- */
 import { lazy } from 'react'
 import type { RouteProps } from './index'
 
@@ -18,10 +12,6 @@ const UseCallbackHooks = lazy(() => import('@/pages/Hooks/UseCallbackHooks'))
 const UseMemoAndCallbackHooks = lazy(() => import('@/pages/Hooks/UseMemoAndCallbackHooks'))
 
 const UseCallbackAndReactMemo = lazy(() => import('@/pages/Hooks/UseCallbackAndReactMemo'))
-
-const CustomerHooks = lazy(() => import('@/pages/Hooks/CustomerHooks'))
-
-const AHooks = lazy(() => import('@/pages/Hooks/AHooks'))
 
 const hooksRoutes: RouteProps[] = [
     {
@@ -53,16 +43,6 @@ const hooksRoutes: RouteProps[] = [
         path: '/useMemoAndCallbackHooks',
         name: 'UseMemo和UseCallback综合使用',
         component: UseMemoAndCallbackHooks,
-    },
-    {
-        path: '/customerHooks',
-        name: '自定义hooks',
-        component: CustomerHooks,
-    },
-    {
-        path: '/aHooks',
-        name: 'aHooks演练',
-        component: AHooks,
     },
 ]
 
