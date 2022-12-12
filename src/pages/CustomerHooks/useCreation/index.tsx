@@ -17,11 +17,10 @@ const Index: React.FC<any> = () => {
             <div>正常的函数： {getNowData()}</div>
             <div>useCreation包裹后的： {nowData}</div>
             <Button
-                color="primary"
+                type="primary"
                 onClick={() => {
                     setFlag(v => !v)
                 }}>
-                {' '}
                 渲染
             </Button>
         </div>

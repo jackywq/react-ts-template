@@ -12,6 +12,7 @@ const depsAreSame = (oldDeps: DependencyList, deps: DependencyList): boolean => 
     return true
 }
 
+/* 参考：https://juejin.cn/post/7101486767336849421#heading-12 */
 const useCreation = <T>(fn: () => T, deps: DependencyList) => {
     const { current } = useRef({
         deps,
